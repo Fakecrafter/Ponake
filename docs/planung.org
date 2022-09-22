@@ -1,0 +1,37 @@
+#+TITLE: Organisation des Projektes
+
+* Idee
+Unsere Idee war ein einfaches Snake-Spiel, sprich eine Schlange die sich auf einer 2D-Ebene in vier richtungen bewegen kann und versucht so viele Aepfel wie moeglich zu essen (mit dem Kopf dagegen kollidieren). Bei jedem Apfel wird die Schlange ein Feld laenger.
+Wenn danach noch Zeit ist, gab es die Ueberlegung, ob man dieses Spiel nicht mit einem Pong-Spiel kombinieren koennte indem man die Schlaeger durch Schlangen ersetzt.
+Ausserdem koennen noch weitere Features implementiert werden, wie zum Beispiel eine Traube, die die Laenge der Schlange verkuerzt, allerdings trotzdem Punkte hinzufuegt.
+* Tools
+Als Programmiersprache wird selbstverstaendlich Python benutzt und als externe Module werden /random/ und /pygame/ verwendet.
+* Design
+** Klasse Snake
+** Klasse Item
+*** Apple
+*** Future Ideas
+** Spielablauf (main)
+* Quellen
+  - [[https://www.python-lernen.de/pygame-tutorial.htm][pygame tutorial]]
+* Aufgaben
+  - Grundgeruest bauen (pygame)
+  - Kaestchenstruktur entwickeln
+  - Klasse fuer die Schlange
+	- draw()
+	- movement()
+	- appendBlock()
+	- reset()
+	- checkCollisionItem() -> Item
+	- checkCollisionWall()
+	- checkCollisionSelf()
+  - Menu
+  - Klasse fuer den Apfel
+Note: Wer was macht, wird am 20.09 besprochen
+
+* Momentan
+Aktuell haben wir lediglich einige Dateien erstellt sowie ein github-repo. Ausserdem wurde sich auf Spiel und Struktur geeinigt
+* Resultat
+Der Kunde erhaelt ein vollstaendiges Spiel, das auf Windows-Betriebssystemen funktioniert. Ausserdem ist das Fenster skalierbar und kann an die Monitorgroesse angepasst werden
+* Experten
+Ein Experte fuer pygame wird benoetigt. Er wird die draw()-Methoden implementieren sowie das Grundgeruest.

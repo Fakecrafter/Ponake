@@ -1,0 +1,85 @@
+% Created 2022-09-19 Mo 18:17
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{fakecrafter}
+\date{\today}
+\title{Organisation des Projektes}
+\hypersetup{
+ pdfauthor={fakecrafter},
+ pdftitle={Organisation des Projektes},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Idee}
+\label{sec:org173f495}
+Unsere Idee war ein einfaches Snake-Spiel, sprich eine Schlange die sich auf einer 2D-Ebene in vier richtungen bewegen kann und versucht so viele Aepfel wie moeglich zu essen (mit dem Kopf dagegen kollidieren). Bei jedem Apfel wird die Schlange ein Feld laenger.
+Wenn danach noch Zeit ist, gab es die Ueberlegung, ob man dieses Spiel nicht mit einem Pong-Spiel kombinieren koennte indem man die Schlaeger durch Schlangen ersetzt.
+Ausserdem koennen noch weitere Features implementiert werden, wie zum Beispiel eine Traube, die die Laenge der Schlange verkuerzt, allerdings trotzdem Punkte hinzufuegt.
+\section{Tools}
+\label{sec:orgb1bf631}
+Als Programmiersprache wird selbstverstaendlich Python benutzt und als externe Module werden \emph{random} und \emph{pygame} verwendet.
+\section{Design}
+\label{sec:orgdd1a3cb}
+\subsection{Klasse Snake}
+\label{sec:org21922b5}
+\subsection{Klasse Item}
+\label{sec:org8ed0010}
+\subsubsection{Apple}
+\label{sec:orgbaa6d28}
+\subsubsection{Future Ideas}
+\label{sec:org378a3c6}
+\subsection{Spielablauf (main)}
+\label{sec:org1b75167}
+\section{Quellen}
+\label{sec:org08704c9}
+\begin{itemize}
+\item \href{https://www.python-lernen.de/pygame-tutorial.htm}{pygame tutorial}
+\end{itemize}
+\section{Aufgaben}
+\label{sec:orgefb77ce}
+\begin{itemize}
+\item Grundgeruest bauen (pygame)
+\item Kaestchenstruktur entwickeln
+\item Klasse fuer die Schlange
+\begin{itemize}
+\item draw()
+\item movement()
+\item appendBlock()
+\item reset()
+\item checkCollisionItem() -> Item
+\item checkCollisionWall()
+\item checkCollisionSelf()
+\end{itemize}
+\item Menu
+\item Klasse fuer den Apfel
+\end{itemize}
+Note: Wer was macht, wird am 20.09 besprochen
+
+\section{Momentan}
+\label{sec:org53c693d}
+Aktuell haben wir lediglich einige Dateien erstellt sowie ein github-repo. Ausserdem wurde sich auf Spiel und Struktur geeinigt
+\section{Resultat}
+\label{sec:org9786c06}
+Der Kunde erhaelt ein vollstaendiges Spiel, das auf Windows-Betriebssystemen funktioniert. Ausserdem ist das Fenster skalierbar und kann an die Monitorgroesse angepasst werden
+\section{Experten}
+\label{sec:org4ebde35}
+Ein Experte fuer pygame wird benoetigt. Er wird die draw()-Methoden implementieren sowie das Grundgeruest.
+\end{document}
