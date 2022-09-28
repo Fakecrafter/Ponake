@@ -68,8 +68,6 @@ class Snake():
 
     def reset(self, boardSize):
         self.score = 0
-        del self.dx
-        del self.dy
         self.dx = 0
         self.dy = 0
         self.body = []

@@ -14,6 +14,11 @@ class Item:
         for i in avoidPoints:
             if [self.x, self.y] == i:
                 self.reset(avoidPoints, size)
+    def checkOutside(self, boardSize):
+        if self.x > boardSize - 1:
+            self.x = boardSize - 1
+        if self.y > boardSize - 1:
+            self.y = boardSize - 1
         
 
 class Apple(Item):
@@ -22,12 +27,12 @@ class Apple(Item):
 class Rosine(Item):
 # hard to see this one
     color = (10,0,10)
-    getSmaller = 10
+    getSmaller = 15
     def action(self, boardSize):
         if boardSize == 10:
             return False
         if self.getSmaller == 0:
-            self.getSmaller = 10
+            self.getSmaller = 15
             return True
         else:
             self.getSmaller -= 1
