@@ -66,10 +66,10 @@ class Snake():
             if i == self.head:
                 return True
 
-    def reset(self, boardSize):
+    def reset(self, boardSize, length):
         self.score = 0
         self.dx = 0
         self.dy = 0
         self.body = []
         self.head = [random.randint(4, boardSize -4), random.randint(4, boardSize - 4)]
-        self.append = 0
+        self.append = length
