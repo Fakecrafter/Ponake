@@ -8,6 +8,7 @@ import color as c
 import pygame
 
 def gameSelection():
+    print("Annette Spielebibliothek:")
     print()
     print("1) Snake")
     print("2) 2048")
