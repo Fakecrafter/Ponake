@@ -1,7 +1,10 @@
 from snake import Snake
 from items import *
 from tictactoe import *
-import tkinter
+import tkinter as tk
+import tile
+from tile import *
+import color as c
 import pygame
 
 def gameSelection():
@@ -42,6 +45,7 @@ def gameReset():
 
 
 def snakeGame():
+    ### INIT ###
     # initialisieren von pygame
     pygame.init()
     pygame.font.init()
@@ -96,9 +100,10 @@ def snakeGame():
     inputdx = 0
     inputdy = 0
 
-    # Schleife Hauptprogramm
+    # GAMELOOP #
     while(spielaktiv):
         # Überprüfen, ob Nutzer eine Aktion durchgeführt hat
+        ### INPUT ###
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 spielaktiv = False
@@ -124,7 +129,7 @@ def snakeGame():
 
 
 
-        # Spiellogik hier integrieren
+        ### LOGIC ### 
         # die Schlange soll nur alle 4 Frames "ausgefuehrt" werden
         if moving_time == 0:
             mySnake.setDirection(inputdx, inputdy)
@@ -166,6 +171,7 @@ def snakeGame():
         myApple.checkOutside(rowscolumns)
         myRosine.checkOutside(rowscolumns)
 
+        ### DRAW ###
 
         # Spielfeld löschen
         screen.fill(BLACK)
@@ -194,7 +200,7 @@ selection = gameSelection()
 if selection == 1:
     snakeGame()
 if selection == 2:
-    pass
+    tileGame()
 if selection == 3:
     tictactoeGame()
     

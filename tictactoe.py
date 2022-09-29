@@ -175,7 +175,7 @@ class board:
 
 
     def print_board(self):
-        print(" ",self.make_printable(self.status[0]), " | ", self.make_printable(self.status[1]), " | ", self.make_printable(self.status[2]), "\n-----------------\n","",self.make_printable(self.status[3]), " | ", self.make_printable(self.status[4]), " | ", self.make_printable(self.status[5]),"\n-----------------\n","", self.make_printable(self.status[6]), " | ", self.make_printable(self.status[7]), " | ", self.make_printable(self.status[8])
+        print("",self.make_printable(self.status[0]), " | ", self.make_printable(self.status[1]), " | ", self.make_printable(self.status[2]), "\n----------------\n",self.make_printable(self.status[3]), " | ", self.make_printable(self.status[4]), " | ", self.make_printable(self.status[5]),"\n----------------\n",self.make_printable(self.status[6]), " | ", self.make_printable(self.status[7]), " | ", self.make_printable(self.status[8])
              )
 
     def spieler_zug(self, zelle, spieler):
@@ -212,20 +212,23 @@ class spieler():
 def tictactoeGame():
     print()
     print()
+    print()
+    print()
+    print()
 
     print('Willkommen zu Tic-Tac-Toe')
     print('_________________________')
-    print('''
-  1  |  2  |  3
------------------
-  4  |  5  |  6
------------------
-  7  |  8  |  9
+    print('''\nBei Tic-Tac-Toe musst du drei deines Symbols in eine Reihe bringen. Ob horizontal, vertikal oder diagonal.
+    Dann wirst du aufgefordert eine Zahl zwischen 1 und 9 einzugeben, dabei ist 1 oben links und 9 unten rechts:
+    1  |  2  |  3  
+  -----------------
+    4  |  5  |  6  
+  -----------------
+    7  |  8  |  9  
     ''')
 
-    print()
 
-
+    global board1
     board1 = board()
 
     spieler2 = spieler(2)
@@ -233,7 +236,7 @@ def tictactoeGame():
     
 
 
-    while True: # Die Hauptschleife
+    while True:#Die Hauptschleife
 
         
         board1.print_board()
